@@ -2,7 +2,7 @@
 
 Latent thinking, latent Chain-of-Thought, continuous reasoning, and multimodal intermediate-state reasoning for AI systems.
 
-This list follows the taxonomy in [latent thinking survey.md](latent%20thinking%20survey.md), organizing papers by intermediate-state carrier, dynamics, semantic role, modality, and contribution type.
+The list is organized by intermediate-state carrier, dynamics, semantic role, modality, and contribution type.
 
 ## Contents
 
