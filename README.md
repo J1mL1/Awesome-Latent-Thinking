@@ -28,7 +28,6 @@ The list is organized by **intermediate-state interface**, modality, and contrib
 - Contribution: `method`, `analysis`, `theory`.
 
 ## Surveys and Roadmaps
-
 | Year | Title | Venue | Paper | Code/Data | Tags | Note |
 | ---- | ----- | ----- | :---: | :-------: | ---- | ---- |
 | 2026 | The Latent Space: Foundation, Evolution, Mechanism, Ability, and Outlook | arXiv | [Paper](https://arxiv.org/abs/2604.02029) | [Code](https://github.com/YU-deep/Awesome-Latent-Space) | `survey`, `latent-space` | Unified latent-space survey across foundation, evolution, mechanism, ability, and outlook. |
@@ -51,7 +50,7 @@ The list is organized by **intermediate-state interface**, modality, and contrib
 | Year | Title | Venue | Paper | Code/Data | Tags | Note |
 | ---- | ----- | ----- | :---: | :-------: | ---- | ---- |
 | 2025 | Enhancing Latent Computation in Transformers with Latent Tokens | arXiv | [Paper](https://arxiv.org/abs/2505.12629) | — | `method`, `simplex-mixture`, `autoregressive`, `free-form`, `language` | Learnable dummy latent tokens guide implicit computation during decoding. |
-| 2025 | Latent Reasoning in LLMs as a Vocabulary-Space Superposition | arXiv | [Paper](https://arxiv.org/abs/2510.15522) | [📦](https://github.com/DJC-GO-SOLO/Latent-SFT) | `method`, `simplex-mixture`, `autoregressive`, `compression`, `language` | Maps latent thoughts to vocabulary-space superpositions. |
+| 2025 | Latent Reasoning in LLMs as a Vocabulary-Space Superposition (Latent-SFT) | arXiv | [Paper](https://arxiv.org/abs/2510.15522) | [📦](https://github.com/DJC-GO-SOLO/Latent-SFT) | `method`, `simplex-mixture`, `autoregressive`, `compression`, `language` | Latent-vocabulary superposition with inductive and supervised masks; compresses reasoning chains by 2.7–5.5× and outperforms explicit SFT. |
 | 2025 | SemCoT | NeurIPS 2025 | [Paper](https://proceedings.neurips.cc/paper_files/paper/2025/file/3ddbd473456a57e3cafb1ee51ddf8ff6-Paper-Conference.pdf) | [📦](https://github.com/YinhanHe123/SemCoT) | `method`, `simplex-mixture`, `autoregressive`, `compression`, `language` | Semantically aligned implicit tokens compress explicit CoT. |
 | 2025 | SoftCoT | ACL 2025 | [Paper](https://aclanthology.org/2025.acl-long.1137/) | — | `method`, `simplex-mixture`, `autoregressive`, `compression`, `language` | Soft thought tokens replace long explicit CoT. |
 | 2025 | SoftCoT++ | arXiv | [Paper](https://arxiv.org/abs/2505.11484) | — | `method`, `simplex-mixture`, `parallel`, `compression`, `language` | Parallel soft-trajectory refinement for test-time latent scaling. |
@@ -102,6 +101,7 @@ The list is organized by **intermediate-state interface**, modality, and contrib
 | ---- | ----- | ----- | :---: | :-------: | ---- | ---- |
 | 2025 | Learning to Reason with Mixture of Tokens | arXiv | [Paper](https://arxiv.org/abs/2509.21482) | — | `method`, `simplex-mixture`, `parallel`, `free-form`, `language` | Continuous token-mixture reasoning under RLVR for higher-entropy exploration. |
 | 2025 | SofT-GRPO | arXiv | [Paper](https://arxiv.org/abs/2511.06411) | [📦](https://github.com/zz1358m/SofT-GRPO-master) | `method`, `simplex-mixture`, `parallel`, `posterior`, `language` | RL with Gumbel/soft-thinking for posterior-style latent optimization. |
+| 2026 | Latent-GRPO: Group Relative Policy Optimization for Latent Reasoning | arXiv | [Paper](https://arxiv.org/abs/2604.27998) | [📦](https://github.com/DJC-GO-SOLO/Latent-GRPO) | `method`, `simplex-mixture`, `parallel`, `posterior`, `language` | Stabilizes GRPO initialized from Latent-SFT using invalid-sample masking, one-sided Gumbel noise, and best-first-token route selection. |
 
 [Back](#contents)
 
@@ -505,9 +505,6 @@ Adjacent methods keep **explicit discrete rationales** as the main intermediate 
 [Back](#contents)
 
 ## Benchmarks and Evaluation
-
-> **Full benchmark design**: [`LATENT_THINKING_BENCHMARK.md`](LATENT_THINKING_BENCHMARK.md) — layered arenas (Modality × Interface), cross-family comparability, and repo implementation roadmap.
-
 A unified evaluation setup for latent thinking should report final-task performance, reasoning economy, causal utility of intermediate states, and grounding quality for multimodal carriers. The survey recommends comparable language tasks such as GSM8K and MATH for language-only simplex-mixture and hidden-feedback methods, community-standard suites for vision, video, audio, and embodied settings, and intervention tests over latent tokens, hidden states, memories, or reconstructed visual traces.
 
 | Focus | Representative Evaluation Direction |
